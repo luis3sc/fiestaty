@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/frame.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/colores.css">
+    <link rel="stylesheet" href="https://use.typekit.net/unc3mmt.css">
+    <!-- f --><!-- remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <style>
+      :root{
+        --swiper-theme-color: var(--blanco);
+      }
+      .swiper-hero {
+        width: 100%;
+        max-width: 390px;
+      }
+
+      .swiper-hero .swiper-slide {
+        width: 100%;
+      }
+      .swiper-hero img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+
+      .swiper-hero .swiper-button-prev,
+      .swiper-hero .swiper-button-next {
+        --swiper-navigation-size: 20px;
+        background-color: var(--primario);
+        height: 70px;
+        width: 50px;
+        margin-top: -35px;
+
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .swiper-hero .swiper-button-prev {
+        border-radius: 0 65px 65px 0;
+        left: -10px;
+      }
+      .swiper-hero .swiper-button-next {
+        border-radius: 65px 0 0 65px;
+        right: -10px;
+      }
+
+      .swiper-hero:hover .swiper-button-prev,
+      .swiper-hero:hover .swiper-button-next {
+        opacity: 1;
+      }
+
+      .swiper-hero .swiper-pagination {
+        --swiper-pagination-color: white;
+        --swiper-pagination-bullet-size: 10px;
+        --swiper-pagination-bullet-inactive-color: #000;
+        --swiper-pagination-bullet-inactive-opacity: 0.25;
+        --swiper-pagination-bullet-opacity: 1;
+        --swiper-pagination-bullet-horizontal-gap: 2px;
+      }
+
+      .swiper-hero .swiper-pagination-bullet {
+        box-shadow: inset 0 0 0 1px #fff;
+      }
+
+      .swiper-hero .swiper-pagination-bullet-active {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+      }
+      @media screen and (min-width: 768px) {
+        .swiper-hero {
+        max-width: 550px;
+      }
+      }
+    </style>
+</head>
+<body>
+    <div class="main-full rel overf">
+        <header class="flex-a bg-1 sticky flex-c top0 zindex3">
+        <div class="padhor-1 w100  mw-1080">
+        <nav class="gap1 flex-spacebetween w100">
+          <a href="#!" class="logo">
+            <img class="parf1 logo-img" src="./img/fiestaty_logo.svg" alt="Logo" />
+          </a>
+          <ul class="nav_menu none-resp w100 gap2">
+            <li class="nav_list gap2">
+              <a href="index.html" class="nav_link gap1 flex clr-b clr-hover-1">
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li class="nav_list gap2 nav_list_menu">
+              <a href="explorar.html" class="nav_link gap1 flex clr-b clr-hover-1">
+                <span>Explorar</span>
+              </a>
+            </li>
+            <li class="nav_list gap2">
+              <a href="#!" class="nav_link gap1 flex clr-b clr-hover-1">
+                <span>Promos</span>
+              </a>
+            </li>
+            <li class="nav_list gap2">
+              <a href="#!" class="nav_link gap1 flex clr-b clr-hover-1">
+                <span>Blog</span>
+              </a>
+            </li>
+            
+          </ul>
+          <div class="flex-a gap1">
+            <div class="nav_toggle block-none clr-b">
+              <ion-icon name="menu-outline"></ion-icon>
+            </div>
+          </div>
+        </nav>
+        </div>
+        </header>
+        <!-- main -->
+      <!-- contenido banner slider -->
+        <section class="w100 mainmin-slider-navscroll flex-centro flex-colum bg-2 padsup-2">
+            <div class="mw-1080 h100 mgauto padhor-1">
+                <div class="padsup-1 h100 w100 flex-c-resp gapresp1 flex-centro">
+                  <div class="flex-a flex-colum mw-600 w100">
+                    <h4 class="clr-1 txt-centro">Decoraciones que convierten <br> momentos en recuerdos</h4>
+                  <h1 class="font_titular clr-1">Inolvidables</h1>
+                  </div>
+                  <div class="w100 swiper swiper-hero border20 sinover">
+                    <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                           <!--  -->
+                          <div class="swiper-slide">
+                            <img class="w100" src="./img/deco1.jpg" alt=""/>
+                          </div>
+                          <!--  -->
+                          <a href="" target="_blank" class="swiper-slide">
+                            <img class="w100" src="./img/deco3.jpg" alt=""/>
+                          </a>
+                          <!--  -->
+                          <div class="swiper-slide">
+                            <img class="w100" src="./img/deco2.jpg" alt=""/>
+                          </div>
+                          <!--  -->
+                          <!--  -->
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                  
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                  
+                        <!-- If we need scrollbar -->
+                        <!-- <div class="swiper-scrollbar"></div> -->
+                  </div>
+                </div>
+            </div>
+            <div class="padsup-1">
+              <div class="flex-c flex-a gap1 padhor-1">
+                <div class=" w100">
+                  <h6 class="clr-1">Cada detalle importa. Permítenos crear la decoración que mereces.</h6>
+                </div>
+                <a class="btn-md  border05 bg-3 clr-1 btn-bh1hover flex-centro" href="#">
+                          Cotizar Ahora
+                </a>
+              </div>
+            </div>
+        </section>
+        <!-- contenido banner slider -->
+        <!-- main -->
+          <!-- BENEFICIOS -->
+        <div class="main-min-full padsup-2 flex-centro bg-5">
+            <!-- BENEFICIOS -->
+            <div class="padhor-1 mw-1080 w100 flex-colum flex-a">
+              <h5 >nuestros</h5>
+              <h1 class="font_titular clr-1 mgtp_-1">Servicios</h1>
+              <div class="gridtcol-300 mw-800 gapresp1 mgtp">
+
+              <div class="bg-b flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/deco2.jpg" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-1">Decoración de Fiestas</h3>
+                   
+                  </div>     
+              </div>
+              <div class="bg-b flex-colum gap-5 border05 sinover">
+                <div class=" sinover flex-centro rel">
+                  <img class="w100" src="https://media.falabella.com/falabellaPE/131606925_01/w=1500,h=1500,fit=pad" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-1">Alquiler de mobiliarios</h3>
+                  
+                </div>
+              </div>
+              <!-- <div class="bg-b flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/mickey.jpeg" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-1">Otros servicios</h6>
+                  
+                  </div>
+              </div>-->
+              </div>
+            </div>
+        </div>
+        <!-- BENEFICIOS -->
+          <!-- BENEFICIOS -->
+        <div class="main-min-full padsup-2 flex-centro bg-b">
+            <!-- BENEFICIOS -->
+            <div class="padhor-1 mw-1080 w100 flex-colum flex-a">
+              <h5 >nuestras</h5>
+              <h1 class="font_titular clr-1 mgtp_-1">Decoraciones</h1>
+          <div class="grid-3-1-resp gapresp1 mgtp">
+
+              <div class="bg-b border05">
+                  <video class="w100" id="myVideo" playsinline controls>
+                      <source src="./img/video.mp4" type="video/mp4">
+                      <source src="tu-video.webm" type="video/webm">
+                      Tu navegador no soporta el elemento de video.
+                  </video>
+              </div>
+              <div class="bg-b  border05 ">
+                  <video class="w100" id="myVideo" playsinline controls>
+                      <source src="./img/video.mp4" type="video/mp4">
+                      <source src="tu-video.webm" type="video/webm">
+                      Tu navegador no soporta el elemento de video.
+                  </video>
+              </div>
+              <div class="bg-b border05 ">
+                  <video class="w100" id="myVideo" playsinline controls>
+                      <source src="./img/video.mp4" type="video/mp4">
+                      <source src="tu-video.webm" type="video/webm">
+                      Tu navegador no soporta el elemento de video.
+                  </video>
+              </div>
+          </div>
+            </div>
+        </div>
+        <!-- BENEFICIOS -->
+       <!-- Formulario de Registro -->
+        <div class=" padsup-3 bg-1 flex-centro" id="registro">
+          <div class="padhor-1 mw-1080 gridcol1-2-resp w100 gap1">
+            <div class="bg-1 w100 flex-centro rel sinover border05">
+              <img class=" w100" src="./img/mickey.jpeg" alt="">
+            </div>
+            <div class="padsup-2 w100">
+              <div class="padhor-1">
+                <form method="post" action="" class="w100 flex-colum gap1"  name="google-sheet" id="google-sheet">
+                  <h4 class="clr-b">Obtén un presupuesto</h4>
+                  <p class="p2 f-delg clr-b">Completa los datos de tu cotización y nosotros nos pondremos en contacto a la brevedad para brindarte la información deseada.</p>
+                
+                  <!-- nombre -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <input id="nombre" class="ftsz1 padding05 w100 bg-b border1px brdclr-g3 border05 inputbrdr-1" 
+                        type="text" name="nombre" required>
+                      <label class="flex-a  gap-5" for="nombre">
+                        <p class="ftsz0_9 clr-b">Nombres y Apellidos</p>
+                        <p class="clr-3" id="nombre-validation"></p>
+                      </label>
+                    </div>
+                  </div>
+                
+                  <!-- celular -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <input class="ftsz1 padding05 w100 border1px brdclr-g3 bg-b border05 inputbrdr-1" 
+                        id="phone" type="tel" name="celular" required>
+                      <label class="flex-a gap-5" for="phone">
+                        <p class="ftsz0_9 clr-b">Teléfono</p>
+                        <p class=" clr-3" id="validation-message"></p>
+                      </label>
+                    </div>
+                  </div>
+                
+                  <!-- gmail -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <input id="gmail" class="ftsz1 padding05 w100 bg-b border1px brdclr-g3 border05 inputbrdr-1" 
+                        type="email" name="gmail" required>
+                      <label class="flex-a gap-5" for="gmail">
+                        <p class="ftsz0_9 clr-b">Correo Electrónico</p>
+                        <p class="clr-3" id="gmail-validation"></p> 
+                      </label>
+                    </div>
+                  </div>
+                
+                  <!-- tipoevento -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <select id="tipoevento" name="tipoevento" 
+                              class="ftsz1 padding05 w100 border1px bg-b brdclr-g3 border05 inputbrdr-1 inputhover" 
+                              required>
+                        <option value="" disabled selected>Selecciona un tipo de evento</option>
+                        <option value="fiestainfantiltematica">Fiesta infantil temática</option>
+                        <option value="fiestaparamascota">Fiesta para mascota</option>
+                        <option value="babyshower">Baby shower</option>
+                        <option value="revelaciondegenero">Revelación de género</option>
+                        <option value="bautizo">Bautizo</option>
+                        <option value="cumpleanos">Cumpleaños</option>
+                      </select>
+                    
+                      <label class="flex-a gap-5" for="tipoevento">
+                        <p class="ftsz0_9 clr-b">Tipo de Evento</p>
+                        <p class="clr-3" id="tipoevento-validation"></p> 
+                      </label>
+                    </div>
+                  </div>
+                
+                  <!-- fechaevento -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <input id="fechaevento" class="ftsz1 padding05 w100 bg-b border1px brdclr-g3 border05 inputbrdr-1" 
+                        type="date" name="fechaevento" required>
+                      <label class="flex-a gap-5" for="fechaevento">
+                        <p class="ftsz0_9 clr-b">Fecha de evento</p>
+                        <p class="clr-3" id="fechaevento-validation"></p>
+                      </label>
+                    </div>
+                  </div>
+                
+                  <!-- lugarevento -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <input id="lugarevento" class="ftsz1 padding05 w100 border1px bg-b brdclr-g3 border05 inputbrdr-1" 
+                        type="text" name="lugarevento" required>
+                      <label class="flex-a gap-5" for="lugarevento">
+                        <p class="ftsz0_9 clr-b">Lugar del evento</p>
+                        <p class="clr-3" id="lugarevento-validation"></p> 
+                      </label>
+                    </div>
+                  </div>
+                
+                  <!-- horaevento -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <input id="horaevento" class="ftsz1 padding05 w100 bg-b border1px brdclr-g3 border05 inputbrdr-1" 
+                        type="time" name="horaevento" required>
+                      <label class="flex-a gap-5" for="horaevento">
+                        <p class="ftsz0_9 clr-b">Hora del evento</p>
+                        <p class="clr-3" id="horaevento-validation"></p>
+                      </label>
+                    </div>
+                  </div>
+                
+                  <!-- botón -->
+                  <button class="btn-md border05 bg-3 clr-1 btn-bh1hover flex-centro mgtp" type="submit">Solicitar presupuesto</button>
+                </form>
+              
+                <div id="mensaje" style="display: none;">
+                  <h1>¡Gracias por completar el formulario!</h1>
+                  <p>Pronto nos pondremos en contacto contigo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer-->
+        <section class="bg-1">
+        <div class="mw-1080 h100 mgauto padhor-1">
+          <div class="padsup-3 flex-colum gap2">
+            <!-- logo -->
+            <div class="mgauto w100 flex-centro padsup-2">
+              <img class="w100 mw-150 mgauto " src="./img/kuttipuylogo-b.png" alt="">
+            </div>
+            <!-- logo -->
+            <!-- footer con enlaces -->
+            <div class="grid-3-1-resp gap2 h100 w100 padsup-2">
+              <div class="flex-colum gap1">
+                <h6 class="clr-b">Acerca de Kuttipuy</h6>
+                <div class="flex-colum gap-5 clr-g4">
+                  <p>Descubre experiencias únicas en Perú, Planifica viajes, únete a salidas grupales y disfruta de nuestra comunidad. ¡Donde cada viajes es una nueva conexión!</p>
+                </div>
+              </div>
+              <div class="flex-colum gap1">
+                <h6 class="clr-b">Enlaces Rápidos</h6>
+                <div class="flex-colum gap-5 ">
+                  <a class="clr-g3" href="">Inicio</a>
+                  <a class="clr-g3" href="">Planes</a>
+                </div>
+              </div>
+              <div class="flex-colum gap1">
+                <h6 class="clr-b">Síguenos en:</h6>
+                <div class="flex-colum gap1">
+                  <a class="clr-g3 flex-a gap1 f-gs1 clr-hover-1 w-fit" href="">
+                    <img class="mw-ico-1 " src="../img/iconos/facebook-round.svg" alt="">
+                    <p>Facebook</p>
+                  </a>
+                  <a class="clr-g3 flex-a gap1 f-gs1 clr-hover-1 w-fit" href="">
+                    <img class="mw-ico-1 " src="../img/iconos/instagram-rounda.svg" alt="">
+                    <p>Instagram</p>
+                  </a>
+                  <a class="clr-g3 flex-a gap1 f-gs1 clr-hover-1 w-fit" href="">
+                    <img class="mw-ico-1 " src="../img/iconos/tiktok-round.svg" alt="">
+                    <p>Tiktok</p>
+                  </a>
+                  <a class="clr-g3 flex-a gap1 f-gs1 clr-hover-1 w-fit" href="">
+                    <img class="mw-ico-1 " src="../img/iconos/youtube-round.svg" alt="">
+                    <p>Youtube</p>
+                  </a>
+                  <a class="clr-g3 flex-a gap1 f-gs1 clr-hover-1 w-fit" href="">
+                    <img class="mw-ico-1 " src="../img/iconos/twitter-round-01.svg" alt="">
+                    <p>Twitter</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- footer con enlaces -->
+            <!-- créditos -->
+            <div class="flex-centro txt-centro clr-b">
+                <p>© 2024 Kuttipuy. Todos los derechos reservados.<br>
+                  Diseñado por <a class="f-bold clr-b" href="#">Luis enrique </a></p>
+            </div>
+          </div>
+        </div>
+        </section>
+    <!-- Footer -->
+    </div>
+    <!-- scripts -->
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- iconos -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- iconos -->
+     <!-- formulario a excel a wsp-->
+    <script src="https://cdn.jsdelivr.net/npm/html5-validation@1.3.0/dist/polyfill.min.js"></script>
+    <script src="./js/formulario-datos-wsp-excel.js"></script>
+    <!-- formulario a excel a wsp -->
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- script del swiper -->
+    <script>
+      const swiper = new Swiper(".swiper-hero", {
+        // Optional parameters
+        // slidesPerView: "auto",
+        // spaceBetween: 15,
+        // slidesPerGroupAuto: true,
+
+        direction: "horizontal",
+        loop: true,
+        // allowTouchMove: true,
+        // effect: "cube",
+        autoplay: {
+          delay: 3000,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          // type: "progressbar"
+          clickable: true,
+          // dynamicBullets: true
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        //   draggable: true,
+        // },
+      });
+    </script>
+    <!-- script del swiper -->
+   
+</body>
+</html>

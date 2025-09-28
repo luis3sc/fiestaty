@@ -1,0 +1,185 @@
+:root{
+    /*COLORES*/
+    /*Paleta de colores*/
+    --primario: #6657ba;
+    --secundario: #e0dcf2;
+    --terciario: #feca5c;
+    --cuaternario: #feb85c;
+    --quintenario: #f8edff;
+    /*TIPOGRAFIA Y FONTS*/
+    /*fontsizes*/
+    --h1: clamp(6.25rem, 3.1rem + 0.75vw, 4rem);
+    --h2: clamp(3rem, 3rem + 0vw, 3rem);
+    --h3: clamp(2.25rem, 2.25rem + 0vw, 2.25rem);
+    --h4: clamp(2rem, 2rem + 0vw, 2rem);
+    --h5: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+    --h6: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);;
+    --p1: clamp(1.25rem, 1.25rem + 0vw, 1.25rem);
+    --p2: clamp(1rem, 1rem + 0vw, 1rem);
+    --p:  clamp(1rem, 0.9rem + 0.5vw, 1.025rem);
+    --txtbtn: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    --caption: clamp(0.75rem, 0.75rem + 0vw, 0.95rem);
+    --overline: clamp(0.625rem, 0.625rem + 0vw, 0.825rem);
+    
+  }
+  .font_titular{
+    font-family: "wreath", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .main-circ-1{
+    width: 25%;
+    left: 2.8em;
+    top: 1.5em;
+    animation: animacion_circ-1 7s ease-in-out infinite;
+  }
+  .main-circ-2{
+    width: 28%;
+    right: 2.8em;
+    top: 2.9em;
+    animation: animacion_circ-2 7s ease-in-out infinite;
+  }
+  .main-circ-3{
+    width: 25%;
+    left: 3.8em;
+    bottom: 2.5em;
+    animation: animacion_circ-2 9.5s ease-in-out infinite;
+  }
+  .main-circ-4{
+    width: 28%;
+    right: 3.8em;
+    bottom: 0em;
+    animation: animacion_circ-1 10s ease-in-out infinite;
+  }
+  
+
+  /*animaciones*/
+  @keyframes animacion_circ-1 {
+
+    0%,to {
+      transform: translate(0)
+  }
+
+  25% {
+      transform: translate(2%,-2%)
+  }
+
+  50% {
+      transform: translate(-2%,2%)
+  }
+
+  75% {
+      transform: translate(2%,-2%)
+  }
+}
+
+@keyframes animacion_circ-2 {
+  0%,to {
+      transform: translate(0)
+  }
+
+  25% {
+      transform: translate(-2%,-2%)
+  }
+
+  50% {
+      transform: translate(2%,-4%)
+  }
+
+  75% {
+      transform: translate(-2%,-2%)
+  }
+}
+
+/*filtro opciones*/
+
+.dropdown-content {
+  display: none;
+  position: absolute; /* Cambia a posición absoluta */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+  width: 250px;
+  top: 100%; /* Muestra el dropdown justo debajo del botón */
+  left: 0; /* Alinea el dropdown con el botón */
+}
+.btn-cont:nth-child(2) .dropdown-content {
+  right: auto; /* Posiciona el dropdown a la derecha del botón */
+  left: 6em; /* Asegúrate de que left no interfiera */
+}
+.btn-cont:nth-child(3) .dropdown-content {
+  right: 1em; /* Posiciona el dropdown a la derecha del botón */
+  left: auto; /* Asegúrate de que left no interfiera */
+}
+/* Selecciona el último dropdown-content */
+.btn-cont:nth-child(4) .dropdown-content {
+  right: 0; /* Posiciona el dropdown a la derecha del botón */
+  left: auto; /* Asegúrate de que left no interfiera */
+}
+.dropdown-content div {
+  margin-bottom: 10px;
+}
+
+/* Estilos para los checkboxes */
+.dropdown-content label {
+  margin-left: 5px;
+}
+.active-filter {
+  background-color: #4CAF50; /* Color de fondo cuando hay filtro aplicado */
+  color: white; /* Color de texto */
+}
+.btn-filter{
+  height: 2.5em;
+  padding: 0 1em;
+}
+@media screen and (min-width: 760px){
+  .main-circ-1{
+    width: 25%;
+    left: 3.8em;
+    top: 1.5em;
+  }
+  .main-circ-2{
+    width: 28%;
+    right: 2.8em;
+    top: 5.9em;
+  }
+  .main-circ-3{
+    width: 25%;
+    left: 3.8em;
+    bottom: 7.5em;
+  }
+  .main-circ-4{
+    width: 28%;
+    right: 4.8em;
+    bottom: 0em;
+  }
+  .btn-cont:nth-child(2) .dropdown-content {
+    right: auto; /* Posiciona el dropdown a la derecha del botón */
+    left: 6em; /* Asegúrate de que left no interfiera */
+  }
+  .btn-cont:nth-child(3) .dropdown-content {
+    right: 5em; /* Posiciona el dropdown a la derecha del botón */
+    left: auto; /* Asegúrate de que left no interfiera */
+  }
+  /* Selecciona el último dropdown-content */
+  .btn-cont:nth-child(4) .dropdown-content {
+    right: -1em; /* Posiciona el dropdown a la derecha del botón */
+    left: auto; /* Asegúrate de que left no interfiera */
+  }
+}
+@media screen and (min-width: 1920px){
+  .btn-cont:nth-child(2) .dropdown-content {
+    right: auto; /* Posiciona el dropdown a la derecha del botón */
+    left: 7.4em; /* Asegúrate de que left no interfiera */
+  }
+  .btn-cont:nth-child(3) .dropdown-content {
+    right: 0.4em; /* Posiciona el dropdown a la derecha del botón */
+    left: auto; /* Asegúrate de que left no interfiera */
+  }
+  /* Selecciona el último dropdown-content */
+  .btn-cont:nth-child(4) .dropdown-content {
+    right: -7em; /* Posiciona el dropdown a la derecha del botón */
+    left: auto; /* Asegúrate de que left no interfiera */
+  }
+}
