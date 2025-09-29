@@ -6,6 +6,8 @@
     --terciario: #feca5c;
     --cuaternario: #feb85c;
     --quintenario: #f8edff;
+    --sextario: #3d3183;
+    --septimo: #281f5a;
     /*TIPOGRAFIA Y FONTS*/
     /*fontsizes*/
     --h1: clamp(6.25rem, 3.1rem + 0.75vw, 4rem);

@@ -16,6 +16,23 @@ function changeColorOnFocus() {
 }
 
 // -----------------------------
+// Validar cantidad de invitados
+// -----------------------------
+function validateInvitados() {
+  const input = document.getElementById("invitados");
+  const validationMessage = document.getElementById("invitados-validation");
+  const value = parseInt(input.value);
+
+  if (!isNaN(value) && value > 0) {
+    validationMessage.textContent = "";
+    input.setCustomValidity("");
+  } else {
+    validationMessage.textContent = "Falta completar";
+    input.setCustomValidity("Número de invitados inválido");
+  }
+}
+
+// -----------------------------
 // Validar número de teléfono
 // -----------------------------
 function validatePhoneNumber() {
@@ -26,12 +43,12 @@ function validatePhoneNumber() {
     validationMessageElement.textContent = "";
     phoneInputField.setCustomValidity("");
   } else {
-    validationMessageElement.textContent = "Número no válido";
+    validationMessageElement.textContent = "Falta completar";
     phoneInputField.setCustomValidity("Número no válido");
   }
 }
 
-/// -----------------------------
+// -----------------------------
 // Validar longitud mínima de inputs
 // -----------------------------
 function validateMinLength(inputId, minLength, validationMessageId) {
@@ -58,23 +75,35 @@ function validateSelect(selectId, validationMessageId) {
     validationMessage.textContent = "";
     select.setCustomValidity("");
   } else {
-    validationMessage.textContent = "Debes seleccionar un tipo de evento";
+    validationMessage.textContent = "Falta completar";
     select.setCustomValidity("Selecciona una opción válida");
   }
 }
+
+// -----------------------------
+// Función para convertir hora a AM/PM
+// -----------------------------
+function formatTimeToAMPM(time24) {
+  if (!time24) return "";
+  let [hours, minutes] = time24.split(":").map(Number);
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12; // convierte 0 -> 12 y 13-23 -> 1-11
+  return `${hours}:${minutes.toString().padStart(2, "0")} ${ampm}`;
+}
+
 // -----------------------------
 // Generar mensaje para WhatsApp
 // -----------------------------
-function generateWhatsAppMessage() {
+function generateWhatsAppMessage(horaFormateada) {
   const fullNumber = phoneInputField.value.trim();
   const nombre = document.getElementById("nombre").value;
   const gmail = document.getElementById("gmail").value;
   const tipoevento = document.getElementById("tipoevento").value;
   const fechaevento = document.getElementById("fechaevento").value;
   const lugarevento = document.getElementById("lugarevento").value;
-  const horaevento = document.getElementById("horaevento").value;
+  const invitados = document.getElementById("invitados").value;
 
-  return `¡Hola! Quiero información sobre el evento
+  return `¡Hola! Quiero información sobre el servicio de decoración
 \nDetalles del Pedido:
 --------------------
 *Cliente*
@@ -82,11 +111,12 @@ Nombre: *${nombre}*
 Celular: *${fullNumber}*
 Correo: *${gmail}*
 --------------------
-*Evento*
+Detalles del evento
 Tipo: *${tipoevento}*
 Fecha: *${fechaevento}*
 Lugar: *${lugarevento}*
-Hora: *${horaevento}*
+Hora: *${horaFormateada}*
+Cantidad de invitados: *${invitados}*
 --------------------
 ¡Gracias!`;
 }
@@ -94,11 +124,11 @@ Hora: *${horaevento}*
 // -----------------------------
 // Enviar datos a WhatsApp
 // -----------------------------
-function sendDataToWhatsApp() {
-  const fullNumber = phoneInputField.value.trim();
-  const message = generateWhatsAppMessage();
+function sendDataToWhatsApp(horaFormateada) {
+  const message = generateWhatsAppMessage(horaFormateada);
   const encodedMessage = encodeURIComponent(message);
   const whatsappNumber = "51989396941"; // tu número
+  const fullNumber = phoneInputField.value.trim();
 
   if (fullNumber.length >= 9) {
     const whatsAppLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
@@ -109,9 +139,9 @@ function sendDataToWhatsApp() {
 }
 
 // -----------------------------
-// Google Apps Script + Validación
+// Google Apps Script
 // -----------------------------
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzpgiYWIBNuGXECqkmMSjs2M9TmFDh2JqKmqNHzbQHRXTMuzhzPH54eq-mmihu0Ng2SYA/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzK3iUmYj1AOLHP6YVzNupjc0y1q6U7PZWgcnpwy6TLal_wVtcfV98oNzNGpxf7XdnVNw/exec';
 const form = document.forms['google-sheet'];
 const messageDiv = document.getElementById('mensaje');
 
@@ -132,24 +162,34 @@ form.addEventListener('submit', e => {
     document.getElementById("tipoevento").checkValidity() &&
     document.getElementById("lugarevento").checkValidity()
   ) {
+    // Convertir hora a AM/PM
+    const horaInput = document.getElementById("horaevento").value;
+    const horaConFormato = formatTimeToAMPM(horaInput);
+
     // Enviar a Google Sheets
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        if (response.ok) {
-          form.style.display = 'none';
-          messageDiv.style.display = 'block';
-        } else {
-          console.error('Error!', response.statusText);
-          alert("Error al enviar los datos. Inténtalo nuevamente más tarde.");
-        }
+    const formData = new FormData(form);
+    formData.set("horaevento", horaConFormato); // reemplaza el valor con AM/PM
+
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
+
+    fetch(scriptURL, { method: 'POST', body: formData })
+      .then(() => {
+        form.style.display = 'none';
+        const nombreCompleto = document.getElementById("nombre").value.trim();
+        const primeraPalabra = nombreCompleto.split(" ")[0];
+
+        document.getElementById("nombre-usuario").textContent = primeraPalabra;
+
+        messageDiv.style.display = 'flex';
       })
-      .catch(error => {
-        console.error('Error!', error.message);
+      .catch(() => {
         alert("Error al enviar los datos. Inténtalo nuevamente más tarde.");
       });
 
     // Enviar a WhatsApp
-    sendDataToWhatsApp();
+    sendDataToWhatsApp(horaConFormato);
   }
 });
 
@@ -163,6 +203,7 @@ document.getElementById("nombre").addEventListener("blur", () => validateMinLeng
 document.getElementById("gmail").addEventListener("blur", () => validateMinLength("gmail", 3, "gmail-validation"));
 document.getElementById("lugarevento").addEventListener("blur", () => validateMinLength("lugarevento", 3, "lugarevento-validation"));
 document.getElementById("tipoevento").addEventListener("blur", () => validateSelect("tipoevento", "tipoevento-validation"));
+document.getElementById("invitados").addEventListener("blur", validateInvitados);
 
 // -----------------------------
 // Inicializar

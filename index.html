@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/colores.css">
     <link rel="stylesheet" href="https://use.typekit.net/unc3mmt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
     <!-- f --><!-- remixicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -17,7 +19,7 @@
       }
       .swiper-hero {
         width: 100%;
-        max-width: 390px;
+        max-width: 320px;
       }
 
       .swiper-hero .swiper-slide {
@@ -72,6 +74,11 @@
       .swiper-hero .swiper-pagination-bullet-active {
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
       }
+      @media screen and (min-width: 408px) {
+        .swiper-hero {
+        max-width: 380px;
+      }
+      }
       @media screen and (min-width: 768px) {
         .swiper-hero {
         max-width: 550px;
@@ -81,7 +88,7 @@
 </head>
 <body>
     <div class="main-full rel overf">
-        <header class="flex-a bg-1 sticky flex-c top0 zindex3">
+        <header class="flex-a bg-1 sticky flex-c top0 zindex3 bx-bot">
         <div class="padhor-1 w100  mw-1080">
         <nav class="gap1 flex-spacebetween w100">
           <a href="#!" class="logo">
@@ -120,14 +127,14 @@
         </header>
         <!-- main -->
       <!-- contenido banner slider -->
-        <section class="w100 mainmin-slider-navscroll flex-centro flex-colum bg-2 padsup-2">
-            <div class="mw-1080 h100 mgauto padhor-1">
+        <section class="w100 mainmin-slider-navscroll flex-centro flex-colum bg-2 padsup-2 gap1">
+            <div class="mw-1080 w100 h100 mgauto padhor-1">
                 <div class="padsup-1 h100 w100 flex-c-resp gapresp1 flex-centro">
                   <div class="flex-a flex-colum mw-600 w100">
                     <h4 class="clr-1 txt-centro">Decoraciones que convierten <br> momentos en recuerdos</h4>
                   <h1 class="font_titular clr-1">Inolvidables</h1>
                   </div>
-                  <div class="w100 swiper swiper-hero border20 sinover">
+                  <div class="w100 swiper swiper-hero border20 ">
                     <!-- Additional required wrapper -->
                         <div class="swiper-wrapper">
                           <!-- Slides -->
@@ -158,12 +165,12 @@
                   </div>
                 </div>
             </div>
-            <div class="padsup-1">
-              <div class="flex-c flex-a gap1 padhor-1">
+            <div class="padsup-1 bg-6 border05">
+              <div class="flex-c flex-a gap1 padhor-2">
                 <div class=" w100">
-                  <h6 class="clr-1">Cada detalle importa. Permítenos crear la decoración que mereces.</h6>
+                  <h6 class="clr-b">Cada detalle importa. Permítenos crear la decoración que mereces.</h6>
                 </div>
-                <a class="btn-md  border05 bg-3 clr-1 btn-bh1hover flex-centro" href="#">
+                <a class="btn-md  border05 f-bold bg-3 clr-1 btn-bh1hover flex-centro" href="#presupuesto">
                           Cotizar Ahora
                 </a>
               </div>
@@ -174,28 +181,65 @@
           <!-- BENEFICIOS -->
         <div class="main-min-full padsup-2 flex-centro bg-5">
             <!-- BENEFICIOS -->
-            <div class="padhor-1 mw-1080 w100 flex-colum flex-a">
+             <div class="padhor-1 mw-1080 w100  ">
+              <div class=" padsup-2 w100 flex-colum flex-a">
               <h5 >nuestros</h5>
               <h1 class="font_titular clr-1 mgtp_-1">Servicios</h1>
-              <div class="gridtcol-300 mw-800 gapresp1 mgtp">
+              <div class="grid-3-1-resp padsup gapresp1 mgtp">
 
-              <div class="bg-b flex-colum gap-5 border05 sinover">
+              <div class="flex-colum gap-5 border05 sinover">
                 <div class="sinover flex-centro rel">
-                  <img class="w100" src="./img/deco2.jpg" alt="">
+                  <img class="w100" src="./img/decoracion_de_cars.webp" alt="">
                 </div>
                   <div class="flex-colum gap-5 padding1">
-                  <h6 class="f-bold clr-1">Decoración de Fiestas</h3>
+                  <h6 class="f-bold clr-g6">Decoraciones Temáticas</h3>
                    
                   </div>     
               </div>
-              <div class="bg-b flex-colum gap-5 border05 sinover">
-                <div class=" sinover flex-centro rel">
-                  <img class="w100" src="https://media.falabella.com/falabellaPE/131606925_01/w=1500,h=1500,fit=pad" alt="">
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/deco_cuimpleanos.png" alt="">
                 </div>
                   <div class="flex-colum gap-5 padding1">
-                  <h6 class="f-bold clr-1">Alquiler de mobiliarios</h3>
-                  
+                  <h6 class="f-bold clr-g6">Decoraciones para Cumpleaños</h3>
+                   
+                  </div>     
+              </div>
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/bautizo.webp" alt="">
                 </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-g6">Decoraciones para Bautizo</h3>
+                   
+                  </div>     
+              </div>
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/deco_revelacion.png" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-g6">Decoraciones para Revelación de Género</h3>
+                   
+                  </div>     
+              </div>
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/deco_babyshower.png" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-g6">Decoraciones para Baby Shower</h3>
+                   
+                  </div>     
+              </div>
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/decoracion_de_comunion.webp" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-g6">Decoraciones para Primera Comunión</h3>
+                   
+                  </div>     
               </div>
               <!-- <div class="bg-b flex-colum gap-5 border05 sinover">
                 <div class="sinover flex-centro rel">
@@ -207,16 +251,16 @@
                   </div>
               </div>-->
               </div>
+              </div>
             </div>
         </div>
         <!-- BENEFICIOS -->
-          <!-- BENEFICIOS -->
+          <!-- BENEFICIOS 
         <div class="main-min-full padsup-2 flex-centro bg-b">
-            <!-- BENEFICIOS -->
             <div class="padhor-1 mw-1080 w100 flex-colum flex-a">
               <h5 >nuestras</h5>
               <h1 class="font_titular clr-1 mgtp_-1">Decoraciones</h1>
-          <div class="grid-3-1-resp gapresp1 mgtp">
+          <div class="grid-3-1-resp gap4 mgtp">
 
               <div class="bg-b border05">
                   <video class="w100" id="myVideo" playsinline controls>
@@ -241,15 +285,55 @@
               </div>
           </div>
             </div>
+        </div>-->
+        <div class="main-min-full padsup-2 flex-centro bg-b">
+            <!-- BENEFICIOS -->
+             <div class="padhor-1 mw-1080 w100  ">
+              <div class=" padsup-2 w100 flex-colum flex-a">
+              <h5 >Alquiler de</h5>
+              <h1 class="font_titular clr-1 mgtp_-1">Mobiliarios</h1>
+              <div class="grid-3-1-resp padsup gapresp1 mgtp">
+
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/mobiliario1.png" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-g6">Decoraciones Temáticas</h3>
+                   
+                  </div>     
+              </div>
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/mobiliario2.png" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-g6">Decoraciones para Cumpleaños</h3>
+                   
+                  </div>     
+              </div>
+              <div class="flex-colum gap-5 border05 sinover">
+                <div class="sinover flex-centro rel">
+                  <img class="w100" src="./img/mobiliario3.png" alt="">
+                </div>
+                  <div class="flex-colum gap-5 padding1">
+                  <h6 class="f-bold clr-g6">Decoraciones para Bautizo</h3>
+                   
+                  </div>     
+              </div>
+             
+              </div>
+              </div>
+            </div>
         </div>
         <!-- BENEFICIOS -->
        <!-- Formulario de Registro -->
-        <div class=" padsup-3 bg-1 flex-centro" id="registro">
+        <div class=" padsup-3 bg-1 flex-centro main-min-full " id="presupuesto">
           <div class="padhor-1 mw-1080 gridcol1-2-resp w100 gap1">
-            <div class="bg-1 w100 flex-centro rel sinover border05">
+            <div class="bg-1 w100 flex-centro rel none-resp sinover border05">
               <img class=" w100" src="./img/mickey.jpeg" alt="">
             </div>
-            <div class="padsup-2 w100">
+            <div class="padsup-2 w100 flex-centro" >
               <div class="padhor-1">
                 <form method="post" action="" class="w100 flex-colum gap1"  name="google-sheet" id="google-sheet">
                   <h4 class="clr-b">Obtén un presupuesto</h4>
@@ -266,7 +350,7 @@
                       </label>
                     </div>
                   </div>
-                
+                  <div class="flex-row gap1 w100">
                   <!-- celular -->
                   <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
@@ -290,7 +374,8 @@
                       </label>
                     </div>
                   </div>
-                
+                </div>
+                  <div class="flex-row gap1 w100">
                   <!-- tipoevento -->
                   <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
@@ -298,12 +383,12 @@
                               class="ftsz1 padding05 w100 border1px bg-b brdclr-g3 border05 inputbrdr-1 inputhover" 
                               required>
                         <option value="" disabled selected>Selecciona un tipo de evento</option>
-                        <option value="fiestainfantiltematica">Fiesta infantil temática</option>
-                        <option value="fiestaparamascota">Fiesta para mascota</option>
-                        <option value="babyshower">Baby shower</option>
-                        <option value="revelaciondegenero">Revelación de género</option>
-                        <option value="bautizo">Bautizo</option>
-                        <option value="cumpleanos">Cumpleaños</option>
+                        <option value="Fiesta infantil temática">Fiesta infantil temática</option>
+                        <option value="Fiesta para mascota">Fiesta para mascota</option>
+                        <option value="Babyshower">Baby shower</option>
+                        <option value="Revelacion de Género">Revelación de género</option>
+                        <option value="Bautizo">Bautizo</option>
+                        <option value="Cumpleaños">Cumpleaños</option>
                       </select>
                     
                       <label class="flex-a gap-5" for="tipoevento">
@@ -324,7 +409,7 @@
                       </label>
                     </div>
                   </div>
-                
+                </div>
                   <!-- lugarevento -->
                   <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
@@ -336,7 +421,7 @@
                       </label>
                     </div>
                   </div>
-                
+                <div class="flex-row gap1 w100">
                   <!-- horaevento -->
                   <div class="mgtp05 w100">
                     <div class="flex-colum-rev">
@@ -348,43 +433,47 @@
                       </label>
                     </div>
                   </div>
-                
+                  <!-- cantidad de invitados -->
+                  <div class="mgtp05 w100">
+                    <div class="flex-colum-rev">
+                      <input id="invitados" class="ftsz1 padding05 w100 border1px bg-b brdclr-g3 border05 inputbrdr-1" 
+                             type="number" name="invitados" min="1" required>
+                      <label class="flex-a gap-5" for="invitados">
+                        <p class="ftsz0_9 clr-b">Cantidad de invitados</p>
+                        <p class="clr-3" id="invitados-validation"></p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
                   <!-- botón -->
                   <button class="btn-md border05 bg-3 clr-1 btn-bh1hover flex-centro mgtp" type="submit">Solicitar presupuesto</button>
                 </form>
-              
-                <div id="mensaje" style="display: none;">
-                  <h1>¡Gracias por completar el formulario!</h1>
-                  <p>Pronto nos pondremos en contacto contigo.</p>
+              <!--<div class="clr-b" id="mensaje" style="display: none;">-->
+                <div class="clr-b flex-centro flex-colum" id="mensaje" style="display: none;">
+                  <p class="ftsz-1_5">🎉¡Muchas Gracias!🎉</p>
+                  <span class="font_titular ftsz-5" id="nombre-usuario">Luis</span>
+                  <p class="ftsz-1_5 txt-centro">Pronto nos pondremos en contacto contigo 🥳✨</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- Footer-->
-        <section class="bg-1">
+        <section class="bg-6">
         <div class="mw-1080 h100 mgauto padhor-1">
           <div class="padsup-3 flex-colum gap2">
             <!-- logo -->
             <div class="mgauto w100 flex-centro padsup-2">
-              <img class="w100 mw-150 mgauto " src="./img/kuttipuylogo-b.png" alt="">
+              <img class="w100 mw-150 mgauto " src="./img/fiestaty_logo.svg" alt="">
             </div>
             <!-- logo -->
             <!-- footer con enlaces -->
-            <div class="grid-3-1-resp gap2 h100 w100 padsup-2">
+            <div class="grid-3-1-resp gap4 h100 w100 padsup-2">
               <div class="flex-colum gap1">
-                <h6 class="clr-b">Acerca de Kuttipuy</h6>
-                <div class="flex-colum gap-5 clr-g4">
-                  <p>Descubre experiencias únicas en Perú, Planifica viajes, únete a salidas grupales y disfruta de nuestra comunidad. ¡Donde cada viajes es una nueva conexión!</p>
-                </div>
+                  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@disifacil" data-unique-id="disifacil" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@disifacil?refer=creator_embed">@disifacil</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                
               </div>
-              <div class="flex-colum gap1">
-                <h6 class="clr-b">Enlaces Rápidos</h6>
-                <div class="flex-colum gap-5 ">
-                  <a class="clr-g3" href="">Inicio</a>
-                  <a class="clr-g3" href="">Planes</a>
-                </div>
-              </div>
+              
               <div class="flex-colum gap1">
                 <h6 class="clr-b">Síguenos en:</h6>
                 <div class="flex-colum gap1">
@@ -400,26 +489,27 @@
                     <img class="mw-ico-1 " src="../img/iconos/tiktok-round.svg" alt="">
                     <p>Tiktok</p>
                   </a>
-                  <a class="clr-g3 flex-a gap1 f-gs1 clr-hover-1 w-fit" href="">
-                    <img class="mw-ico-1 " src="../img/iconos/youtube-round.svg" alt="">
-                    <p>Youtube</p>
-                  </a>
-                  <a class="clr-g3 flex-a gap1 f-gs1 clr-hover-1 w-fit" href="">
-                    <img class="mw-ico-1 " src="../img/iconos/twitter-round-01.svg" alt="">
-                    <p>Twitter</p>
-                  </a>
+                </div>
+              </div>
+              <div class="flex-colum gap1">
+                <h6 class="clr-b">Información de Contacto</h6>
+                <div class="flex-colum gap-5 clr-b">
+                  <p><b>Teléfono:</b>  +51 96685512</p>
+                  <p><b>Correo Eléctronico:</b>  fiestaty@gmail.com</p>
                 </div>
               </div>
             </div>
             <!-- footer con enlaces -->
             <!-- créditos -->
-            <div class="flex-centro txt-centro clr-b">
-                <p>© 2024 Kuttipuy. Todos los derechos reservados.<br>
-                  Diseñado por <a class="f-bold clr-b" href="#">Luis enrique </a></p>
-            </div>
           </div>
         </div>
         </section>
+        <div class="padsup-1 bg-7">
+          <div class="padhor-1">
+            <p class="clr-b txt-centro">© 2025 Fiestaty. todos los derechos reservados.<br>
+                      Diseñado por <a class="f-bold clr-b" target="_blank" href="https://www.behance.net/Luis3sc">Luis enrique </a></p>
+          </div>
+        </div>
     <!-- Footer -->
     </div>
     <!-- scripts -->
@@ -478,7 +568,4 @@
     <!-- script del swiper -->
    
 </body>
-
 </html>
-
-

@@ -52,6 +52,9 @@
   --sz0-5: .5em; /*8px*/
 }
 /*General*/
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0px;
   box-sizing: border-box;
@@ -141,6 +144,12 @@ main,.main-p{
 }
 .bg-5{
   background-color: var(--quintenario);
+}
+.bg-6{
+  background-color: var(--sextario);
+}
+.bg-7{
+  background-color: var(--septimo);
 }
 .bg-g1{
   background-color: var(--gris1);
@@ -354,7 +363,7 @@ border-color: var(--gris3) !important;
 /*FONTS*/
 /*FONTS*/
 h1{
-  font-size: 4.75rem;
+  font-size: 4.25rem;
 }
 h2{
   font-size: var(--h2);
@@ -419,6 +428,9 @@ font-size: .8em;
 }
 .fs-4{
   font-size: var(--sz4);
+}
+.ftsz-5{
+  font-size: 5em;
 }
 /*text decoration*/
 .subrayar{
@@ -1056,10 +1068,10 @@ grid-template-columns: repeat(auto-fit, minmax(1.5em, 1fr));
 .gap-5{
   gap: var(--sz0-5);
 }
-.gap1,.gapresp1{
+.gap1{
   gap: var(--sz1);
 }
-.gap1-5{
+.gap1-5,.gapresp1{
   gap:var(--sz1-5);
 }
 .gap2{
@@ -1067,6 +1079,9 @@ grid-template-columns: repeat(auto-fit, minmax(1.5em, 1fr));
 }
 .gap3{
   gap: var(--sz3);
+}
+.gap4{
+  gap: var(--sz4);
 }
 .gap-75{
   gap: var(--sz0-75);
@@ -1157,6 +1172,9 @@ place-items: center;
 }
 .padhor-1-2{
   padding: var(--sz1) var(--sz2);
+}
+.padhor-2{
+  padding: 0 var(--sz2);
 }
 .padlat0-5{
   padding: 0.5em 0.8em !important;
