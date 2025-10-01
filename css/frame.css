@@ -52,21 +52,18 @@
   --sz0-5: .5em; /*8px*/
 }
 /*General*/
-html {
-  scroll-behavior: smooth;
-}
 * {
   margin: 0px;
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
   padding:0px;
   line-height: normal;
+  scroll-behavior: smooth;
 }
 *,::before,::after {
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }  
 button, input, a{
@@ -1347,6 +1344,9 @@ place-items: center;
 .lef2{
   left: var(--sz2);
 }
+.lef3{
+  left: var(--sz3);
+}
 .bot1{
   bottom: var(--sz1);
 }
@@ -1584,6 +1584,13 @@ place-items: center;
 }
 .scl3-5{
   transform: scale(3.2);
+}
+.img-scl125{
+  transition: transform 0.3s ease; /* Animación suave de 0.3 segundos */
+  transform: scale(1) rotateZ(0deg); /* Escala normal */
+}
+.img-scl125:hover {
+  transform: scale(1.15) rotateZ(2.5deg); /* Escala al 125% */
 }
 /*Filtros*/
 /*Blur gausiano*/
